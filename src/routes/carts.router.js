@@ -82,11 +82,9 @@ router.delete('/:cid/products/:pid', async (req,res) => {
         const idProduct = req.params.pid;
 
         const cart = await cartModel.find({_id:idCart});
-        //cart[0].products.find(element.product => element.product.id = idProduct);
+        const products = cart[0].products.filter(element => element.product != idProduct);
 
-        //let pos = frutas.indexOf('Banana')
-
-        cart[0].products.pop();
+        cart[0].products = products;
         
         const result = await cartModel.updateOne({_id:idCart}, {$set:cart[0]});
 

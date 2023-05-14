@@ -41,3 +41,7 @@ Date: 10/5/2023 - Hour: 22:05:57 - Method: GET all carts
 Date: 10/5/2023 - Hour: 22:06:34 - Method: UPDATE a cart
 Date: 10/5/2023 - Hour: 22:06:37 - Method: GET all carts
 Date: 14/5/2023 - Hour: 00:02:13 - Method: GET all carts
+Date: 14/5/2023 - Hour: 16:02:08 - Method: GET all carts
+Date: 14/5/2023 - Hour: 16:15:33 - Method: GET all carts
+Date: 14/5/2023 - Hour: 16:16:31 - Method: DELETE a product in a cart
+Date: 14/5/2023 - Hour: 16:16:37 - Method: GET all carts
