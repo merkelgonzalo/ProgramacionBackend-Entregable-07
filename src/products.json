@@ -1,0 +1,78 @@
+[
+	{
+		"title": "Auriculares",
+		"description": "Skullcandy",
+		"price": 6500,
+		"thumbnail": [],
+		"code": "SK10120",
+		"stock": 14,
+		"category": "Musica",
+		"status": true,
+		"id": 1
+	},
+	{
+		"title": "Auriculares",
+		"description": "Skullcandy",
+		"price": 6500,
+		"thumbnail": [],
+		"code": "SK10120",
+		"stock": 14,
+		"category": "Musica",
+		"status": true,
+		"id": 4
+	},
+	{
+		"title": "Notebook",
+		"description": "Lenovo Thinkpad",
+		"price": 300000,
+		"thumbnail": [],
+		"code": "qwerabc124",
+		"stock": 71,
+		"category": "Windows Laptops",
+		"status": true,
+		"id": 5
+	},
+	{
+		"title": "Celular",
+		"description": "Samsung Galaxy S22",
+		"price": 150000,
+		"thumbnail": [],
+		"code": "rrrabc123",
+		"stock": 0,
+		"category": "Android Smartphones",
+		"status": false,
+		"id": 7
+	},
+	{
+		"title": "Notebook",
+		"description": "McBook Pro",
+		"price": 300000,
+		"thumbnail": [],
+		"code": "abcasdf124",
+		"stock": 71,
+		"category": "Apple Laptops",
+		"status": true,
+		"id": 8
+	},
+	{
+		"title": "Celular",
+		"description": "iPhone 13",
+		"price": 400000,
+		"thumbnail": [],
+		"code": "abe123",
+		"stock": 43,
+		"category": "Apple Smartphones",
+		"status": true,
+		"id": 10
+	},
+	{
+		"title": "Licuadora",
+		"description": "Smart Samsung",
+		"price": "70000",
+		"code": "lic123",
+		"stock": "5",
+		"category": "Electrodomesticos",
+		"status": true,
+		"id": 11
+	}
+]
