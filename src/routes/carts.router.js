@@ -75,7 +75,7 @@ router.post('/:cid/product/:pid', async (req,res) => {
 });
 
 router.delete('/:cid/products/:pid', async (req,res) => {
-    //deberá eliminar del carrito el producto seleccionado
+    //Deberá eliminar del carrito el producto seleccionado
     try{
         await managerAccess.saveLog('DELETE a product in a cart');
         const idCart = req.params.cid;
@@ -105,16 +105,14 @@ router.delete('/:cid/products/:pid', async (req,res) => {
 });
 
 router.delete('/:cid', async (req,res) => {
-    // deberá eliminar todos los productos del carrito
+    //Deberá eliminar todos los productos del carrito
     try{
         await managerAccess.saveLog('DELETE all products in a cart');
         const idCart = req.params.cid;
 
         const cart = await cartModel.find({_id:idCart});
 
-        //const products = cart[0].products.forEach().pop(); VER
-
-        cart[0].products = products;
+        cart[0].products = [];
         
         const result = await cartModel.updateOne({_id:idCart}, {$set:cart[0]});
 
