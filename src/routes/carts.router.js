@@ -82,6 +82,12 @@ router.delete('/:cid/products/:pid', async (req,res) => {
         const idProduct = req.params.pid;
 
         const cart = await cartModel.find({_id:idCart});
+        const product = await productModel.find({_id:idProduct});
+        
+        if(product.length == 0){
+            throw 'Product ID not found';
+        }
+
         const products = cart[0].products.filter(element => element.product != idProduct);
 
         cart[0].products = products;
@@ -93,13 +99,33 @@ router.delete('/:cid/products/:pid', async (req,res) => {
             payload: result
         });
     }catch(error){
-        console.log('Cannot get the product with mongoose: '+error);
+        console.log('Cannot delete the product with mongoose: '+error);
         return res.send({status:"error", error: "ID not found"});
     }
 });
 
 router.delete('/:cid', async (req,res) => {
-    // deberá eliminar todos los productos del carrito 
+    // deberá eliminar todos los productos del carrito
+    try{
+        await managerAccess.saveLog('DELETE all products in a cart');
+        const idCart = req.params.cid;
+
+        const cart = await cartModel.find({_id:idCart});
+
+        //const products = cart[0].products.forEach().pop(); VER
+
+        cart[0].products = products;
+        
+        const result = await cartModel.updateOne({_id:idCart}, {$set:cart[0]});
+
+        res.send({
+            status: 'success',
+            payload: result
+        });
+    }catch(error){
+        console.log('Cannot delete the product with mongoose: '+error);
+        return res.send({status:"error", error: "ID not found"});
+    } 
 });
 
 router.put('/:cid', async (req,res) => {

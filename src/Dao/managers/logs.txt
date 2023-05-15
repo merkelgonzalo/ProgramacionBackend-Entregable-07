@@ -45,3 +45,68 @@ Date: 14/5/2023 - Hour: 16:02:08 - Method: GET all carts
 Date: 14/5/2023 - Hour: 16:15:33 - Method: GET all carts
 Date: 14/5/2023 - Hour: 16:16:31 - Method: DELETE a product in a cart
 Date: 14/5/2023 - Hour: 16:16:37 - Method: GET all carts
+Date: 14/5/2023 - Hour: 16:24:37 - Method: DELETE a product in a cart
+Date: 14/5/2023 - Hour: 16:24:58 - Method: DELETE a product in a cart
+Date: 14/5/2023 - Hour: 16:25:13 - Method: GET all carts
+Date: 14/5/2023 - Hour: 16:26:51 - Method: DELETE a product in a cart
+Date: 14/5/2023 - Hour: 16:27:45 - Method: DELETE a product in a cart
+Date: 14/5/2023 - Hour: 16:35:38 - Method: DELETE a product in a cart
+Date: 14/5/2023 - Hour: 16:36:03 - Method: DELETE a product in a cart
+Date: 14/5/2023 - Hour: 16:36:31 - Method: DELETE a product in a cart
+Date: 14/5/2023 - Hour: 16:36:37 - Method: GET all carts
+Date: 14/5/2023 - Hour: 16:37:16 - Method: DELETE a product in a cart
+Date: 14/5/2023 - Hour: 16:37:29 - Method: DELETE a product in a cart
+Date: 14/5/2023 - Hour: 20:52:35 - Method: GET all carts
+Date: 14/5/2023 - Hour: 20:52:55 - Method: GET all products
+Date: 14/5/2023 - Hour: 20:53:39 - Method: GET all products
+Date: 14/5/2023 - Hour: 20:55:59 - Method: GET all products
+Date: 14/5/2023 - Hour: 20:56:20 - Method: GET all products
+Date: 14/5/2023 - Hour: 20:56:37 - Method: GET all products
+Date: 14/5/2023 - Hour: 20:58:35 - Method: GET all products
+Date: 14/5/2023 - Hour: 20:58:52 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:01:27 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:01:46 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:01:54 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:05:08 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:05:19 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:06:07 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:07:22 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:07:44 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:09:56 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:10:08 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:10:35 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:11:19 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:11:31 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:12:07 - Method: GET a product
+Date: 14/5/2023 - Hour: 21:12:32 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:13:08 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:13:26 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:15:36 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:16:13 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:16:28 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:17:24 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:18:58 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:19:50 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:21:03 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:21:23 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:22:51 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:23:42 - Method: GET all products
+Date: 14/5/2023 - Hour: 21:24:03 - Method: GET all carts
+Date: 14/5/2023 - Hour: 21:24:14 - Method: UPDATE a cart
+Date: 14/5/2023 - Hour: 21:24:31 - Method: UPDATE a cart
+Date: 14/5/2023 - Hour: 21:24:45 - Method: UPDATE a cart
+Date: 14/5/2023 - Hour: 21:24:48 - Method: GET all carts
+Date: 14/5/2023 - Hour: 21:27:30 - Method: DELETE a product in a cart
+Date: 14/5/2023 - Hour: 21:28:10 - Method: DELETE a product in a cart
+Date: 14/5/2023 - Hour: 21:30:50 - Method: GET all carts
+Date: 14/5/2023 - Hour: 21:31:14 - Method: DELETE a product in a cart
+Date: 14/5/2023 - Hour: 21:31:19 - Method: GET all carts
+Date: 14/5/2023 - Hour: 21:47:07 - Method: DELETE all products in a cart
+Date: 15/5/2023 - Hour: 16:13:30 - Method: GET all products
+Date: 15/5/2023 - Hour: 16:14:00 - Method: GET all products
+Date: 15/5/2023 - Hour: 16:17:23 - Method: GET all products
+Date: 15/5/2023 - Hour: 16:18:03 - Method: GET all products
+Date: 15/5/2023 - Hour: 16:18:35 - Method: GET all products
+Date: 15/5/2023 - Hour: 16:20:12 - Method: GET all products
+Date: 15/5/2023 - Hour: 16:20:34 - Method: GET all products
+Date: 15/5/2023 - Hour: 16:21:11 - Method: GET all products

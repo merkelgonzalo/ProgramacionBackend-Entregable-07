@@ -8,28 +8,18 @@ const managerAccess = new ManagerAccess();
 router.get('/', async (req,res) => {
     try{
         await managerAccess.saveLog('GET all products');
-        if(!req.query.limit){ const limit = 10 }else{ const limit = req.query.limit };
-        if(!req.query.page){ const page = 1 }else{ const page = req.query.page };
-        //ASC/DESC, PARA REALIZAR ORDENAMIENTO
-        const sort = req.query.sort;
-        //TIPO DE ELEMENTO A BUSCAR (FILTRO)
-        const query = req.query.query;
         
-        const products = await productModel.find();
-        products = products.filter(product => product.id <= limit);
+        //VER LIMIT
+        let limit = req.query.limit;
+        if(limit == undefined){
+            limit = 10;
+        }
+        let products = await productModel.find();
+        products = products.slice(0,limit);
         res.send({
             status: "success",
-            payload: products,
-            page: page
+            payload: products
         });
-        /* Falta totalPages:,
-                prevPage:,
-                nextPage:,
-                hasPrevPage:,
-                hasNextPage:,
-                prevLink:, (null si hasPrevPage=false)
-                nextLink:, (null si hasNextPAge=false)
-        */
     }catch(error){
         console.log('Cannot get products with mongoose: '+error)
     }
