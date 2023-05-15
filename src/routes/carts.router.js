@@ -127,11 +127,44 @@ router.delete('/:cid', async (req,res) => {
 });
 
 router.put('/:cid', async (req,res) => {
-    //deberá actualizar el carrito con un arreglo de productos con el formato especificado
+    //Deberá actualizar el carrito con un arreglo de productos con el formato especificado
 });
 
 router.put('/:cid/products/:pid', async (req,res) => {
-    //deberá poder actualizar SÓLO la cantidad de ejemplares del producto por cualquier cantidad pasada desde req.body
+    //Deberá poder actualizar SÓLO la cantidad de ejemplares del producto por cualquier cantidad pasada desde req.body
+
+    try{
+        await managerAccess.saveLog('UPDATE product s quantity in a cart');
+        const idCart = req.params.cid;
+        const idProduct = req.params.pid;
+        const newQuantity = req.body.quantity;
+
+        const cart = await cartModel.find({_id:idCart});
+        const product = await productModel.find({_id:idProduct});
+        
+        if(product.length == 0){
+            throw 'Product ID not found';
+        }
+
+        cart[0].products.forEach(function(element){
+            if(element.product == idProduct){
+                element.quantity = newQuantity;
+            }
+        });
+        
+        const result = await cartModel.updateOne({_id:idCart}, {$set:cart[0]});
+
+        res.send({
+            status: 'success',
+            payload: result
+        });
+    }catch(error){
+        console.log('Cannot delete the product with mongoose: '+error);
+        return res.send({status:"error", error: "ID not found"});
+    }
+
+
+
 });
 
 export default router;

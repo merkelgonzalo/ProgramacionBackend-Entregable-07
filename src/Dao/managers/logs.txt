@@ -120,3 +120,10 @@ Date: 15/5/2023 - Hour: 16:29:41 - Method: DELETE all products in a cart
 Date: 15/5/2023 - Hour: 16:29:47 - Method: GET all carts
 Date: 15/5/2023 - Hour: 16:31:18 - Method: UPDATE a cart
 Date: 15/5/2023 - Hour: 16:31:27 - Method: GET all carts
+Date: 15/5/2023 - Hour: 17:19:56 - Method: UPDATE product s quantity in a cart
+Date: 15/5/2023 - Hour: 17:20:12 - Method: GET all carts
+Date: 15/5/2023 - Hour: 17:21:09 - Method: UPDATE product s quantity in a cart
+Date: 15/5/2023 - Hour: 17:21:33 - Method: UPDATE product s quantity in a cart
+Date: 15/5/2023 - Hour: 17:21:41 - Method: GET all carts
+Date: 15/5/2023 - Hour: 17:22:30 - Method: UPDATE product s quantity in a cart
+Date: 15/5/2023 - Hour: 17:22:47 - Method: UPDATE product s quantity in a cart
