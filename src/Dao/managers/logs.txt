@@ -128,3 +128,4 @@ Date: 15/5/2023 - Hour: 17:21:41 - Method: GET all carts
 Date: 15/5/2023 - Hour: 17:22:30 - Method: UPDATE product s quantity in a cart
 Date: 15/5/2023 - Hour: 17:22:47 - Method: UPDATE product s quantity in a cart
 Date: 15/5/2023 - Hour: 18:39:00 - Method: GET all carts
+Date: 16/5/2023 - Hour: 19:56:37 - Method: POST a product

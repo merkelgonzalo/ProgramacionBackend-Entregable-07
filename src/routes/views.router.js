@@ -3,16 +3,14 @@ import {Router} from 'express';
 import { productModel } from '../Dao/models/products.model.js';
 
 const router = Router();
-//const productManager = new ProductManager("/src/products.json");
 
 router.get('/', async (req, res) => { 
-    const products = await productModel.find();
-    //const products = await productManager.getProducts();
+    const products = await productModel.find().lean();
     res.render('home', {products: products});
 });
 
 router.get('/realTimeProducts', async (req, res) => { 
-    const products = await productManager.getProducts();
+    const products = await productModel.find().lean();
     res.render('realTimeProducts', {products: products});
 });
 

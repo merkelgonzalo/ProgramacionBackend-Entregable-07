@@ -25,8 +25,8 @@
 <h2>Delete Product</h2>
     <form id="deleteForm" method="post" name="products">
       <div>
-        <label for="id"><b>ID</b></label>
-        <input type="number" name="id">
+        <label for="_id"><b>ID</b></label>
+        <input name="_id">
       </div>
       <input type="submit">
     </form>
@@ -47,7 +47,7 @@
     <tbody id="productsNow">
         {{#each products}}
             <tr>
-                <td>{{this.id}}</td>
+                <td>{{this._id}}</td>
                 <td>{{this.title}}</td>
                 <td>{{this.description}}</td>
                 <td>{{this.price}}</td>

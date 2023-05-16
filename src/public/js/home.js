@@ -28,7 +28,7 @@ socket.on('updateProducts', (data) => {
   const productsMap = data
     .map((item) => {
       return `<tr>
-      <th scope="row">${item.id}</th>
+      <th scope="row">${item._id}</th>
       <td>${item.title}</td>
       <td>${item.description}</td>
       <td>${item.price}</td>
@@ -47,9 +47,9 @@ const deleteForm = document.getElementById("deleteForm");
 deleteForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const id = parseInt(deleteForm.elements.id.value);
+  const _id = deleteForm.elements._id.value;
 
-  socket.emit('deleteProduct', id);
+  socket.emit('deleteProduct', _id);
 });
 
 const input = document.getElementById('textbox');
