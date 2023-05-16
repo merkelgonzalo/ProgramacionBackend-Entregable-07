@@ -1,27 +1,37 @@
 <h1>Products Home</h1>
-<table>
-    <tr> 
-        <th>ID</th>
-        <th>Title</th>
-        <th>Description</th> 
-        <th>Price</th> 
-        <th>Code</th> 
-        <th>Stock</th> 
-        <th>Category</th> 
-        <th>Status</th> 
-    </tr>
-    <tbody>
-        {{#each products}}
-            <tr>
-                <td>{{this._id}}</td>
-                <td>{{this.title}}</td>
-                <td>{{this.description}}</td>
-                <td>{{this.price}}</td>
-                <td>{{this.code}}</td>
-                <td>{{this.stock}}</td>
-                <td>{{this.category}}</td>
-                <td>{{this.status}}</td>
-            </tr>
-        {{/each}}
-    </tbody>
-</table>
+<div>
+    <table>
+        <tr> 
+            <th>ID</th>
+            <th>Title</th>
+            <th>Description</th> 
+            <th>Price</th> 
+            <th>Code</th> 
+            <th>Stock</th> 
+            <th>Category</th> 
+            <th>Status</th> 
+        </tr>
+        <tbody>
+            {{#each products}}
+                <tr>
+                    <td>{{this._id}}</td>
+                    <td>{{this.title}}</td>
+                    <td>{{this.description}}</td>
+                    <td>{{this.price}}</td>
+                    <td>{{this.code}}</td>
+                    <td>{{this.stock}}</td>
+                    <td>{{this.category}}</td>
+                    <td>{{this.status}}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    
+    {{#if hasPrevPage}}
+    <a href="/?page={{prevPage}}"><button>Anterior</button></a>
+    {{/if}}
+    {{#if hasNextPage}}
+    <a href="/?page={{nextPage}}"><button>Siguiente</button></a>
+    {{/if}}
+
+</div>
