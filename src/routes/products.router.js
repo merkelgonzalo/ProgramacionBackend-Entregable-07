@@ -9,7 +9,6 @@ router.get('/', async (req,res) => {
     try{
         await managerAccess.saveLog('GET all products');
         
-        //VER LIMIT
         let limit = req.query.limit;
         if(limit == undefined){
             limit = 10;
