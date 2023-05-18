@@ -9,7 +9,8 @@
             <th>Code</th> 
             <th>Stock</th> 
             <th>Category</th> 
-            <th>Status</th> 
+            <th>Status</th>
+            <th></th>
         </tr>
         <tbody>
             {{#each products}}
@@ -22,18 +23,20 @@
                     <td>{{this.stock}}</td>
                     <td>{{this.category}}</td>
                     <td>{{this.status}}</td>
+                    <td><button>Add to cart</button></td>
                 </tr>
             {{/each}}
         </tbody>
     </table>
     
     {{#if hasPrevPage}}
-    {{!-- <a href="/?limit={{limit}}&page={{prevPage}}"><button>Anterior</button></a> --}}
+    {{!-- <a href="/?limit={{limit}}&page={{prevPage}}"><button>Prev</button></a> --}}
     <a href="/?page={{prevPage}}"><button>Anterior</button></a>
     {{/if}}
     {{#if hasNextPage}}
-    {{!-- <a href="/?limit={{limit}}&page={{nextPage}}"><button>Siguiente</button></a> --}}
+    {{!-- <a href="/?limit={{limit}}&page={{nextPage}}"><button>Next</button></a> --}}
     <a href="/?page={{nextPage}}"><button>Siguiente</button></a>
     {{/if}}
+    
 
 </div>

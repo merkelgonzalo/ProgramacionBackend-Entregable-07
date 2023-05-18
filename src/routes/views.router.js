@@ -6,27 +6,33 @@ const router = Router();
 router.get('/', async (req, res) => { 
     const {page = 1} = req.query;
     let limit = req.query.limit;
-    let sort = parseInt(req.query.sort);
+
+    let sort = req.query.sort
     
     if(limit == undefined){
-        limit = 10;
+        limit = 2;
     }
     //const products = await productModel.find().lean();
-    const {docs, hasPrevPage, hasNextPage, nextPage, prevPage} = await productModel.paginate({},{limit, page, lean:true });
+    const {docs, hasPrevPage, hasNextPage, prevPage, nextPage, prevLink, nextLink} = await productModel.paginate({},{limit, page, lean:true });
 
     //const products = docs;
     let products = docs.slice(0,limit);
 
-    products = await productModel.aggregate([
-              { $sort : { price : sort, _id: 1 } }
-            ]);
-
+    if(sort != undefined){
+        sort = parseInt(req.query.sort);
+        products = await productModel.aggregate([
+            { $sort : { price : sort, _id: 1 } }
+          ]);
+    }
+    
     res.render('home', {
         products: products,
         hasPrevPage,
         hasNextPage,
         prevPage,
-        nextPage
+        nextPage,
+        prevLink,
+        nextLink
     });
 });
 

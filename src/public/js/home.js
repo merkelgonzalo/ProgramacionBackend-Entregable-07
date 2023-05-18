@@ -70,4 +70,5 @@ socket.on('log',data=>{
   logs += `${ log.socketid } say: ${ log.message} <br/>`      
   });
   log.innerHTML = logs;    
-})
+});
+
