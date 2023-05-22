@@ -10,9 +10,19 @@ router.get('/', async (req, res) => {
     const limit = parseInt(req.query.limit) || 2;
     const sort = parseInt(req.query.sort) || 0;
     const page = parseInt(req.query.page) || 1;
+    const queryParam = req.query.query || null;
 
     try {
         await managerAccess.saveLog('GET all products');
+
+        const query = {};
+
+        if (queryParam) {
+            query["$or"] = [
+                { category: { $regex: queryParam, $options: 'i' } },
+                { status: queryParam}
+            ];
+        }
 
         const options = {
         limit,
@@ -24,7 +34,7 @@ router.get('/', async (req, res) => {
             options.sort = { price: sort };
         }
 
-        const result = await productModel.paginate({}, options);
+        const result = await productModel.paginate(query, options);
 
         res.render('home', { 
             products: result.docs,
@@ -33,8 +43,10 @@ router.get('/', async (req, res) => {
             totalPages: result.totalPages,
             hasPrevPage: result.hasPrevPage,
             prevPage: result.prevPage,
+            prevLink: result.prevLink,
             hasNextPage: result.hasNextPage,
             nextPage: result.nextPage,
+            nextLink: result.prevLink,
             limit,
             sort
         });
