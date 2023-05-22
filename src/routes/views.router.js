@@ -1,39 +1,47 @@
 import {Router} from 'express';
 import { productModel } from '../Dao/models/products.model.js';
+import ManagerAccess from '../Dao/managers/ManagerAccess.js';
 
 const router = Router();
+const managerAccess = new ManagerAccess();
 
-router.get('/', async (req, res) => { 
-    const {page = 1} = req.query;
-    let limit = req.query.limit;
+router.get('/', async (req, res) => {
 
-    let sort = req.query.sort
-    
-    if(limit == undefined){
-        limit = 2;
+    const limit = parseInt(req.query.limit) || 2;
+    const sort = parseInt(req.query.sort) || 0;
+    const page = parseInt(req.query.page) || 1;
+
+    try {
+        await managerAccess.saveLog('GET all products');
+
+        const options = {
+        limit,
+        page,
+        lean: true
+        };
+
+        if (sort !== 0) {
+            options.sort = { price: sort };
+        }
+
+        const result = await productModel.paginate({}, options);
+
+        res.render('home', { 
+            products: result.docs,
+            total: result.total,
+            page: result.page,
+            totalPages: result.totalPages,
+            hasPrevPage: result.hasPrevPage,
+            prevPage: result.prevPage,
+            hasNextPage: result.hasNextPage,
+            nextPage: result.nextPage,
+            limit,
+            sort
+        });
+    } catch (error) {
+        console.log('Cannot get products with mongoose: '+error)
+        res.status(500).send('Internal server error');
     }
-    //const products = await productModel.find().lean();
-    const {docs, hasPrevPage, hasNextPage, prevPage, nextPage, prevLink, nextLink} = await productModel.paginate({},{limit, page, lean:true });
-
-    //const products = docs;
-    let products = docs.slice(0,limit);
-
-    if(sort != undefined){
-        sort = parseInt(req.query.sort);
-        products = await productModel.aggregate([
-            { $sort : { price : sort, _id: 1 } }
-          ]);
-    }
-    
-    res.render('home', {
-        products: products,
-        hasPrevPage,
-        hasNextPage,
-        prevPage,
-        nextPage,
-        prevLink,
-        nextLink
-    });
 });
 
 router.get('/realTimeProducts', async (req, res) => { 

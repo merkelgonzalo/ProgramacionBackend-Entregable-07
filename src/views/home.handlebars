@@ -30,13 +30,12 @@
     </table>
     
     {{#if hasPrevPage}}
-    {{!-- <a href="/?limit={{limit}}&page={{prevPage}}"><button>Prev</button></a> --}}
-    <a href="/?page={{prevPage}}"><button>Anterior</button></a>
+    <a href="/?page={{prevPage}}&limit={{limit}}&sort={{sort}}"><button>Prev</button></a>
     {{/if}}
     {{#if hasNextPage}}
-    {{!-- <a href="/?limit={{limit}}&page={{nextPage}}"><button>Next</button></a> --}}
-    <a href="/?page={{nextPage}}"><button>Siguiente</button></a>
+    <a href="/?page={{nextPage}}&limit={{limit}}&sort={{sort}}"><button>Next</button></a>
     {{/if}}
-    
+
+    <p>Page {{page}} / {{totalPages}}</p>
 
 </div>
