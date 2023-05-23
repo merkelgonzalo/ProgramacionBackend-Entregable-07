@@ -35,6 +35,16 @@
     <a href="/?page={{nextPage}}&limit={{limit}}&sort={{sort}}&query={{queryParam}}"><button>Next</button></a>
     {{/if}}
 
-    <p>Page {{page}} / {{totalPages}}</p>
+    
+    <p>Page 
+        {{#if hasPrevPage}}
+        <a href="/?page={{prevPage}}&limit={{limit}}&sort={{sort}}&query={{queryParam}}">{{prevPage}}</a>
+        {{/if}}
+        {{page}}
+        {{#if hasNextPage}}
+        <a href="/?page={{nextPage}}&limit={{limit}}&sort={{sort}}&query={{queryParam}}">{{nextPage}}</a>
+        {{/if}}
+    </p>
+    
 
 </div>
