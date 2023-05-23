@@ -17,17 +17,21 @@ router.get('/', async (req, res) => {
 
         const query = {};
 
-        if (queryParam) {
-            query["$or"] = [
-                { category: { $regex: queryParam, $options: 'i' } },
-                { status: queryParam}
-            ];
+        if (queryParam !== null) {
+            query["$or"] = [    
+              { category: { $regex: queryParam, $options: "i" } },    
+              {      
+                status: ["true", "false"].includes(queryParam.toLowerCase())
+                  ? JSON.parse(queryParam.toLowerCase())
+                  : undefined,  
+              },    
+            ];    
         }
 
         const options = {
-        limit,
-        page,
-        lean: true
+            limit,
+            page,
+            lean: true
         };
 
         if (sort !== 0) {
@@ -48,7 +52,8 @@ router.get('/', async (req, res) => {
             nextPage: result.nextPage,
             nextLink: result.prevLink,
             limit,
-            sort
+            sort,
+            queryParam
         });
     } catch (error) {
         console.log('Cannot get products with mongoose: '+error)

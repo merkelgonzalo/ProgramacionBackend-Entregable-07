@@ -128,6 +128,7 @@ router.delete('/:cid', async (req,res) => {
 
 router.put('/:cid', async (req,res) => {
     //Deberá actualizar el carrito con un arreglo de productos con el formato especificado
+    
 });
 
 router.put('/:cid/products/:pid', async (req,res) => {
