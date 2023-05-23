@@ -71,4 +71,3 @@ socket.on('log',data=>{
   });
   log.innerHTML = logs;    
 });
-
