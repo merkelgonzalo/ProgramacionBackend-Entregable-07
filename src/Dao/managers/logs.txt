@@ -200,3 +200,12 @@ Date: 22/5/2023 - Hour: 21:26:17 - Method: GET all products
 Date: 22/5/2023 - Hour: 21:26:20 - Method: GET all products
 Date: 22/5/2023 - Hour: 21:26:33 - Method: GET all products
 Date: 22/5/2023 - Hour: 21:26:43 - Method: GET all products
+Date: 23/5/2023 - Hour: 16:40:19 - Method: GET all carts
+Date: 23/5/2023 - Hour: 16:40:50 - Method: UPDATE all products in a cart
+Date: 23/5/2023 - Hour: 16:43:23 - Method: UPDATE all products in a cart
+Date: 23/5/2023 - Hour: 16:44:32 - Method: GET all carts
+Date: 23/5/2023 - Hour: 16:44:46 - Method: UPDATE all products in a cart
+Date: 23/5/2023 - Hour: 16:45:20 - Method: UPDATE all products in a cart
+Date: 23/5/2023 - Hour: 16:46:43 - Method: UPDATE all products in a cart
+Date: 23/5/2023 - Hour: 16:47:04 - Method: UPDATE all products in a cart
+Date: 23/5/2023 - Hour: 16:47:13 - Method: GET all carts
